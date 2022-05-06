@@ -14,6 +14,11 @@ public class DefaultController {
 
     @GetMapping("/luke")
     public String getLuke(){
-        return "Hey, this is Luke";
+        return "Hey, this is Luke!";
+    }
+
+    @GetMapping("/chandler")
+    public String getChandler(){
+        return "Hey, this is Luke's son, Chandler!";
     }
 }

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo1-deployment
+  labels:
+    app: demo1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo1
+  template:
+    metadata:
+      labels:
+        app: demo1
+    spec:
+      containers:
+        - name: yaegel-demo
+          image: yaegel-demo:1.0
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo1-service
+spec:
+  selector:
+    app: demo1
+  type: LoadBalancer # For external service (confusing as internal services also does load balancing but 'kubectl get service' command will show internal as ClusterIP vs LoadBalancer)
+  ports:
+    - protocol: TCP
+      port: 3500
+      targetPort: 8080
+      nodePort: 30000 # For external service - must be between 30000-32767

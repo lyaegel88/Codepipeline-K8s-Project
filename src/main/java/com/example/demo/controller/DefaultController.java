@@ -21,4 +21,9 @@ public class DefaultController {
     public String getChandler(){
         return "Hey, this is Luke's son, Chandler!";
     }
+
+    @GetMapping("/anna")
+    public String getAnna(){
+        return "Hey, this is Luke's wife, Anna!";
+    }
 }

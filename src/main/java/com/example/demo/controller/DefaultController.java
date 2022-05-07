@@ -33,7 +33,7 @@ public class DefaultController {
     }
 
     @GetMapping("/test")
-    public String getBrandon(){
+    public String getTest(){
         return "This is a test!";
     }
 }

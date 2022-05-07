@@ -32,7 +32,7 @@ public class DefaultController {
         return "Hey, this is Luke's best friend, Brandon!";
     }
 
-    @GetMapping("/test")
+    @GetMapping("/anothertest")
     public String getTest(){
         return "This is a test!";
     }

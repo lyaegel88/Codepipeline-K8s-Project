@@ -31,4 +31,9 @@ public class DefaultController {
     public String getBrandon(){
         return "Hey, this is Luke's best friend, Brandon!";
     }
+
+    @GetMapping("/test")
+    public String getBrandon(){
+        return "This is a test!";
+    }
 }

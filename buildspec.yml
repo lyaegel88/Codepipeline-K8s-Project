@@ -8,6 +8,7 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully"
+      - echo "this is a test!!!"
 artifacts:
   files:
     - target/demo1-0.0.1-SNAPSHOT.jar

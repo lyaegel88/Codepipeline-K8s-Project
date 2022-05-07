@@ -11,11 +11,4 @@ class Demo1ApplicationTests {
     @Test
     void contextLoads() {
     }
-
-    @Test
-    void failTest(){
-        int a = 1;
-        assertEquals(a, 4);
-    }
-
 }
